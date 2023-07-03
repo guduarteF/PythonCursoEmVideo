@@ -1,2 +1,3 @@
 # PythonCursoEmVideo
-Exercícios do Curso em Vídeo de Python do Gustavo Guanabara ( YOUTUBE ) 
+Desafios do Curso em Vídeo de Python do Gustavo Guanabara ( YOUTUBE ) 
+Com enunciado e a minha resolução / correção
