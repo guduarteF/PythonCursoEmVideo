@@ -1,3 +1,6 @@
+""" Faça um programa que leia um ângulo qualquer e mostre na tela
+o valor do seno , cossseno e tangente desse angulo"""
+
 from math import sin, cos, tan, radians
 ang = float(input('Digite o angulo que você deseja ? '))
 seno = sin(radians(ang))

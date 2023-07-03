@@ -1,3 +1,6 @@
+""" Faça um programa que leia um ano qualquer e mostre
+se ele é BISSEXTO """
+
 from datetime import date
 ano = int(input('Digite um Ano : , [Coloque 0 para analisar o ano atual] '))
 if ano == 0:

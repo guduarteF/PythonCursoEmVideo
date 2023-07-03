@@ -10,8 +10,8 @@ print('[ 3 ] Para \033[4m HEXADECIMAL \033[m')
 escolha = str(input('\033[1M DIGITE ... : \033[m').strip())
 
 if escolha == '1':
-    print('O número {} convertido para BINÁRIO é \033[7m {} \033[m'.format(num, bin(num)))
+    print('O número {} convertido para BINÁRIO é \033[7m {} \033[m'.format(num, bin(num) [2:]))
 elif escolha == '2':
-    print('O número {} convertido para OCTAL é \033[7m {} \033[m '.format(num, oct(num)))
+    print('O número {} convertido para OCTAL é \033[7m {} \033[m '.format(num, oct(num) [2:]))
 elif escolha == '3':
-    print('O número {} convertido para HEXADECIMAL é \033[7m {} \033[m'.format(num, hex(num)))
+    print('O número {} convertido para HEXADECIMAL é \033[7m {} \033[m'.format(num, hex(num) [2:]))

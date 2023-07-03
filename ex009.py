@@ -1,3 +1,7 @@
+""" Faça um programa que leia um número inteiro qualquer e mostre
+na tela a sua tabuada"""
+
+
 num = int(input('Digite um número inteiro qualquer :'))
 num1 = num * 1
 num2 = num * 2
