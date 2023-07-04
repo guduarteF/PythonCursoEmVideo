@@ -6,7 +6,7 @@ print('DETECTOR DE PALÍNDROMO :')
 print('(palavras que lidas de trás pra frente são iguais)')
 print('(desconsiderando acentos e espaços)')
 print('-=' * 10)
-frase = str(input('Escreva uma frase :').strip())
+frase = str(input('Escreva uma frase :')).strip().upper()
 fraseJunta = ''.join(frase.split())
 fraseInvertida = ''
 
