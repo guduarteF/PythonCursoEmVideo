@@ -7,10 +7,12 @@ flag = 999
 soma = 0
 count = 0
 num = 0
-# digite 999 para parar ? (o usuario vai saber ?)
+print('Digite o número 999 para parar')
 while num != flag:
     num = int(input('Digite um número inteiro '))
-    soma += num
-    count += 1
+    if num != 999:
+        soma += num
+        count += 1
+
 print('Foram digitados {} números'.format(count))
 print('A soma entre os números digitados é {}'.format(soma))

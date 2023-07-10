@@ -8,7 +8,7 @@ count = 0
 resultado = termo
 
 while count < 10:
-    resultado = resultado + razao
-    print('{}>'.format(resultado),end='')
+    print('{}>'.format(resultado), end='')
     count += 1
+    resultado = resultado + razao
 print('FIM')
