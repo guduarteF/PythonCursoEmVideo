@@ -9,6 +9,7 @@ maior = 0
 count = 0
 soma = 0
 menor = 999
+
 """ aqui foi feito uma gambiarra da minha parte , eu setei o valor menor = 999 
  pois assim qualquer valor comparado a ele vai ser o menor 
  mas não é o ideal fazer essa gambiarra , caso o usuário digite algo maior que 999.
