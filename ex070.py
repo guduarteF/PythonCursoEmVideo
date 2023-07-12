@@ -15,14 +15,11 @@ while 'S' in continuar:
     nome = str(input('Nome do Produto: '))
     preco = float(input('Preço: R$'))
     continuar = str(input('Quer continuar? [S/N]')).strip().upper()
-    if count == 0:
+    if count == 0 or preco < precomaisbarato:
         #outra opcao é fazer uma lista produto = [nome,valor] ao invés de 2 var
         precomaisbarato = preco
         nomemaisbarato = nome
         count += 1
-    if preco < precomaisbarato:
-        precomaisbarato = preco
-        nomemaisbarato = nome
     if preco > 1000:
         maisdemil += 1
     total += preco
