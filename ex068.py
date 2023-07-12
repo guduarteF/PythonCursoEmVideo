@@ -13,7 +13,7 @@ while True:
         valor = int(input('Digite um valor: '))
         escolha = ' '
         soma = aleatorio + valor
-        """ OBS !! -while PI not in escolha = o 'PI' respectivamente tem que estar na string escolha
+        """ OBS !! -while PI not in escolha = o 'PI' tem que estar na string 
                    -while escolha not in PI = retorna true os inputs(I,P,PI)"""
         while escolha not in 'PI':
             escolha = str(input('Par ou Ímpar? [P/I]')).strip().upper()
