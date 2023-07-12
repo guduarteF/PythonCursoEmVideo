@@ -13,6 +13,13 @@ while True:
         print('PROGRAMA ENCERRADO ! Volte sempre')
         break
 
+        # guanabara utilizou um [for] pra fazer a tabuada
+        # muito mais performático pois resolve o problema em 2 linhas
+        # ja feito em exercícios anteriores de for loop. Ex:.
+
+    """  for c in range(1, 11):
+         print(f'{num} x {c} = {num * c}') """
+
     while True:
         if i < 10:
             count += 1

@@ -7,40 +7,33 @@ from random import randint
 print('-' * 60)
 print('VAMOS JOGAR PAR OU ÍMPAR!')
 print('-' * 60)
-
-resultado = 'VENCEU'
 vezes = 0
 while True:
-    if resultado == 'VENCEU':
         aleatorio = randint(0, 10)
         valor = int(input('Digite um valor: '))
-        escolha = str(input('Par ou Ímpar? [P/I]')).strip().upper()
+        escolha = ' '
         soma = aleatorio + valor
-
+        """ OBS !! -while PI not in escolha = o 'PI' respectivamente tem que estar na string escolha
+                   -while escolha not in PI = retorna true os inputs(I,P,PI)"""
+        while escolha not in 'PI':
+            escolha = str(input('Par ou Ímpar? [P/I]')).strip().upper()
+        print(f'Você jogou {valor} e o computador {aleatorio}. Total de {soma}', end='')
+        print(' DEU PAR' if soma % 2 == 0 else ' DEU IMPAR')
         if escolha == 'P':
-            escolha = 'PAR'
-        else:
-            escolha = 'ÍMPAR'
+            if soma % 2 == 0:
+                print('VOCE VENCEU')
+                vezes += 1
+            else:
+                print('VOCE PERDEU')
+                break
+        if escolha == 'I':
+            if soma % 2 == 1:
+                print('VOCE VENCEU')
+                vezes += 1
+            else:
+                print('VOCE PERDEU')
+                break
 
-        if soma % 2 == 0:
-            condicao = 'PAR'
-        else:
-            condicao = 'ÍMPAR'
-
-        if escolha == condicao:
-            resultado = 'VENCEU'
-            vezes += 1
-        else:
-            resultado = 'PERDEU'
-
-        print('-' * 60)
-        print(f'Você jogou {valor} e o computador {aleatorio}. Total de {soma} = DEU {condicao}')
-        print('-' * 60)
-        print(f'VOCÊ {resultado}')
-        if resultado == 'VENCEU':
-            print('Vamos jogar novamente...')
-            print('=-'*30)
-    else:
-        break
-print('-' * 60)
+        print('Vamos jogar novamente...')
+print('=-' * 30)
 print(f'GAME OVER! Você venceu {vezes}')
