@@ -4,6 +4,8 @@ Caso o número ja exista lá dentro, ele não será adicionado.
 No final, serão exibidos todos os valores únicos digitados, em ordem drescente"""
 valores = list()
 continuar = 'S'
+# guanabara utiliza no final do while -> f resposta in 'Nn': break .
+# Ao invés de começar a iteração com o if
 while True:
     if 'S' in continuar:
         n = (int(input('Digite um valor ')))

@@ -1,8 +1,9 @@
 """ Faça um programa que leia 5 valores númericos e guarde-os em uma lista.
  No final , mostre qual foi o maior e o menor valor digitado e as suas respectivas posições na lista."""
-
+#guanabara usou uma lista fazia
+# guanabara usou 24 linhas , eu resolvi em 13
 valores = [0,0,0,0,0]
-menor = maior = 0
+# também usou 3 estruturas de iteração , mas o primeiro for dele foi 'for c in range(0,5)
 for pos, valor in enumerate(valores):
     valores[pos] = int(input(f'Digite um valor para a Posição {pos}: '))
 print('=-' * 30)
