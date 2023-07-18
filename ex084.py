@@ -43,6 +43,6 @@ print(f'Ao todo, você cadastrou {len(galera)} pessoas')
 print(f'O maior peso foi de {maior[0][1]} Kg. Peso de ', end='')
 for c in range(0, len(maior)):
     print(f'{maior[c][0]} ', end='')
-print(f'\n O menor peso foi de {menor[0][1]} Kg. ', end='')
+print(f'\n O menor peso foi de {menor[0][1]} Kg. Peso de ', end='')
 for c in range(0, len(menor)):
     print(f'{menor[c][0]} ', end='')
