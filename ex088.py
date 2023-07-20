@@ -23,6 +23,8 @@ for i in range(1, qtd+1):
     # De uma posição x para todas as posições y
     # While para garantir que o número alterado não seja igual a outro numero na lista
 
+# Guanabara durante o append dos numeros na lista usou um if
+    """ if num not in lista: append"""
     while verificacao:
         verificacao = False
         for x in range(0, 6):

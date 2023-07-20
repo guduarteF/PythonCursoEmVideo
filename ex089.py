@@ -2,21 +2,16 @@
 e guarde tudo em uma lista composta . No final , mostre um boletim
 contendo a média de cada um e permita que o usuário possa mostrar as
 notas de cada aluno individualmente. """
-
-# ALUNOS  [ '[ FULANO, [5.5, 8.0], media ]',  [[BELTRANO], [7.9, 4.5], [media]] ]
-alunos = list()
-dados = list()
-notas = list()
+# ficha[[nome, [nota1, nota2], media]] ficha[[[]]]
+ficha = list()
 num = 0
+
 while True:
     nome = input('Nome: ')
-    notas.insert(0, float(input('Nota 1: ')))
-    notas.insert(1, float(input('Nota 2: ')))
-    media = (notas[0] + notas[1]) / 2
-    dados.append((nome, notas[:], media))
-    alunos.append(dados[:])
-    notas.clear()
-    dados.clear()
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: '))
+    media = (nota1 + nota2) / 2
+    ficha.append([nome, [nota1, nota2], media])
     continuar = str(input('Quer continuar? [S/N]')).strip().upper()
     if continuar != 'S':
         break
@@ -24,13 +19,13 @@ while True:
 print('-=' * 15)
 print('No.  NOME        MÉDIA')
 print('-' * 15)
-for num in range(0, len(alunos)):
-    print(f'{num}  {alunos[num][0][0]}  {alunos[num][0][2]}  ')
+for i, a in enumerate(ficha):
+    print(f'{i:<4}{a[0]:<10}{a[2]:>8.1f}  ')
 print('-' * 15)
 while True:
     num = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
     if num == 999:
         break
-    print(f'Notas de {alunos[num][0][0]} são {alunos[num][0][1]}')
+    print(f'Notas de {ficha[num][0]} são {ficha[num][1]}')
 print('FINALIZANDO...')
 print('<<< VOLTE SEMPRE >>>')
