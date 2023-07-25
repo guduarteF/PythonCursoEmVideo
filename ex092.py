@@ -10,6 +10,7 @@ Carteira["nome"] = str(input('Nome: '))
 Ano = int(input('Ano de Nascimento: '))
 Carteira["idade"] = (datetime.date.today().year - Ano)
 Carteira["ctps"] = int(input("Cateira de trabalho (0 não tem): "))
+print('-=' * 15)
 if Carteira["ctps"] == 0:
     for k, v in Carteira.items():
         print(f'{k} tem o valor {v}')
