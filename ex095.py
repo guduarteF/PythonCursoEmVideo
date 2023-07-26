@@ -28,3 +28,14 @@ for num in range(0, len(jogadores)):
     for keys, values in jogadores[num].items():
         print(f'{values}      ', end='')
     print()
+print('-' * 35)
+while True:
+    numero = int(input('Mostrar dados de qual jogador? (999 para parar)'))
+    if numero == 999:
+        break
+    elif numero > len(jogadores) - 1:
+        print(f'Não existe jogador com código {numero}')
+    else:
+        print(f'-- LEVANTAMENTO DO JOGADOR {jogadores[numero]["nome"]} :')
+        for x in range(0, len(jogadores[numero]["gols"])):
+            print(f'No jogo {x + 1} fez {jogadores[numero]["gols"][x]}')
