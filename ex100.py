@@ -3,14 +3,17 @@ e somaPar(). A primeira função vai sortear 5 numeros e vai colocá-los dentro 
 segunda vai mostrar a soma entre todos os valores PARES sorteados pela função anterior"""
 
 from random import randint
+from time import sleep
 
-numeros = [randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10)]
-
-
-def sorteia():
+def sorteia(lista):
     print(f'Sorteando 5 valores da lista: ', end='')
-    for cada in numeros:
-        print(f'{cada} ', end='')
+    for cont in range(0, 5):
+        n = randint(1, 10)
+        lista.append(n)
+        # O Flush é usado para garantir que o print ocorra no tempo certo
+        # usado juntamente com o sleep
+        print(f'{n} ', end='', flush=True)
+        sleep(.3)
     print('PRONTO!')
 
 
@@ -21,6 +24,8 @@ def somapar():
             soma += each
     print(f'Somando os valores pares de {numeros}, temos {soma}')
 
-
-sorteia()
+numeros = list()
+sorteia(numeros)
 somapar()
+
+
