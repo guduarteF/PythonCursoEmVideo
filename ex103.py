@@ -8,8 +8,6 @@ sido informado corretamente."""
 
 
 def ficha(nome='<desconhecido>', gols=0):
-    if nome == '':
-        nome = '<desconhecido>'
     print(f'O jogador {nome} fez {gols} gol(s) no campeonato.')
 
 
@@ -35,4 +33,7 @@ def leiaint(txt):
 print('-' * 30)
 nome = str(input('Nome do Jogador: ')).strip()
 gols = leiaint('Número de Gols: ')
-ficha(nome, gols)
+if nome == '':
+    ficha(gols=gols)
+else:
+    ficha(nome, gols)
