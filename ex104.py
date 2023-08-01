@@ -4,7 +4,8 @@ validação
 para aceitar apenas valor númerico.
 Ex: n = leiaInt('Digite um n') """
 
-
+# eu utilizo a mesma lógica do exercício anterior
+# guanabara resolve com o uso do is.numeric() novamente.
 def leiaint(txt):
 
     while True:

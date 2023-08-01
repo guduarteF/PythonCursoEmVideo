@@ -4,6 +4,8 @@ Quando o usuario digitar a palavra 'FIM', o programa se encerrará.
 Obs: use CORES """
 
 
+# guanabara fez uma lista c , em cada posição é uma cor
+
 def msg(mensagem, cor):
     print(f'\033[30;{cor}m', end='')
     print('~' * (len(mensagem) + 8))

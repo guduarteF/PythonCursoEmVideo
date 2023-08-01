@@ -10,6 +10,11 @@ sido informado corretamente."""
 def ficha(nome='<desconhecido>', gols=0):
     print(f'O jogador {nome} fez {gols} gol(s) no campeonato.')
 
+# eu criei uma função leiaint que tem um for passando por cada valor do input
+# e em cada valor da string eu verifico se tem algum numero de 0-9
+# se todos forem numeros convert pra int e retorna o valor
+
+# guanabara lê uma string e usa o *var.isnumeric()* , se for , ele converte pra int
 
 def leiaint(txt):
     while True:

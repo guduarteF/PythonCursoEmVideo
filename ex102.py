@@ -3,11 +3,6 @@ parâmetros: o primeiro que indique o número a calcular e o outro chamado
 show, que será um valor lógico (opcional) indicando se será mostrado
 ou não na tela o processo de cálculo do fatorial."""
 
-# não consegui pensar numa solução sem gambiarra pra não mostrar o '='
-# quando o show é false
-# e também não mostrar o último x apos o valor 1
-
-
 def fatorial(num, show=False):
     """
     -> Calcula o Fatorial de um número.
@@ -18,12 +13,15 @@ def fatorial(num, show=False):
 
     f = 1
     for x in range(num, 0, -1):
-        f *= x
         if show:
-            print(f'{x} x ', end='')
-    print('= ', end='')
+            print(x, end='')
+            if x > 1:
+                print(' x ', end='')
+            else:
+                print(' = ', end='')
+        f *= x
     return f
 
 
-print(fatorial(5, show=False))
+print(fatorial(5, show = True))
 help(fatorial)
