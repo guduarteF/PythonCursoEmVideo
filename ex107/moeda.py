@@ -18,6 +18,3 @@ def diminuir(num, porcem):
     return result
 
 
-def moeda(num):
-    formato = f'R${num:.2f}'
-    return formato
