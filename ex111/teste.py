@@ -6,4 +6,4 @@ para o primeiro pacote e mantenha tudo funcionando."""
 from ex111.utilidadesCeV import moeda
 
 p = float(input('Digite o preço: R$'))
-moeda.resumo(p, 35, 22)
+moeda.resumo(p, 20, 12)

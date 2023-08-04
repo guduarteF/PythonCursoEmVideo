@@ -28,12 +28,12 @@ def moeda(preco=0.0, moeda='R$'):
     return f'{moeda}{preco:>.2f}'.replace('.', ',')
 
 
-def resumo(preco=0, porcent_aumento=0, porcent_redut=0):
+def resumo(preco=0, porcent_aumento=10, porcent_redut=5):
     print('-' * 30)
     print('{:^30}'.format('RESUMO DO VALOR'))
     print('-' * 30)
-    print(f'Preço analisado: {moeda(preco):>10}')
-    print(f'Dobro do preço: {dobro(preco, True):>10}')
-    print(f'Metade do preço: {metade(preco, True):>10}')
-    print(f'{porcent_aumento}% de aumento: {aumentar(preco,porcent_aumento, True):>10}')
-    print(f'{porcent_redut}% de redução: {diminuir(preco, porcent_redut, True):>10}')
+    print(f'Preço analisado: \t{moeda(preco)}')
+    print(f'Dobro do preço: \t{dobro(preco, True)}')
+    print(f'Metade do preço: \t{metade(preco, True)}')
+    print(f'{porcent_aumento}% de aumento: \t{aumentar(preco,porcent_aumento, True)}')
+    print(f'{porcent_redut}% de redução: \t{diminuir(preco, porcent_redut, True)}')
