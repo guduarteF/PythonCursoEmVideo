@@ -3,16 +3,8 @@ em um arquivo de texto simples.
 O sistema só vai ter 2 opções: cadastrar uma nova pessoa e listar todas as pessoas cadastradas."""
 
 from time import sleep
-
-
-def exibir(txt):
-    print('-' * 45)
-    print(f'{txt:^45}')
-    print('-' * 45)
-
-
-def cor(txt, num, continua=False):
-    print(f'\033[{num}m {txt} \033[m') if continua is False else print(f'\033[{num}m {txt} \033[m', end='')
+from ex115.lib.interface import *
+# * importa tudo
 
 
 opcao = 0
@@ -36,7 +28,7 @@ while True:
             idade = int(input('Idade: '))
             print(f'Novo registro de {nome} adicionado')
             with open('pessoas.txt', 'a') as arquivo:
-                texto = f'{nome} {idade:>25} anos'
+                texto = f'{nome:<30} {idade:>3} anos'
                 arquivo.write(texto + '\n')
             sleep(1)
         elif opcao == 1:
@@ -48,6 +40,5 @@ while True:
             sleep(1)
         else:
             cor('ERRO! Digite uma opção válida!', 31)
-
     except:
         cor('ERRO! Digite uma opção válida!', 31)
